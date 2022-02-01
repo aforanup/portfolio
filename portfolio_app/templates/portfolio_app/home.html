@@ -34,6 +34,22 @@
         font-size: 40px;
         color: rgba(226, 213, 31, 0.767);
     }
+    .next-button{
+        background-color: rgba(187, 176, 17, 0.767);
+        border:groove;
+        font-size: 22px;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        transition-duration: 0.1s;
+        text-decoration: none;
+        overflow: hidden;
+        cursor: pointer;
+        border-radius: 12px;
+    }
+    .next-button:hover{
+        box-shadow: 0 12px 16px 0 rgba(116, 108, 8, 0.712), 0 17px 50px 0 rgba(116, 108, 8, 0.712);
+    }
 </style>
 
 <div class="home-container">
@@ -41,20 +57,24 @@
     <div class = "number-loading">
         0%
     </div>
+    <a href="{% url 'home' %}" class="next">
+        <input type="button" class="next-button" value="Enter The Zone" />
+    </a>
 </div>
 
 <script>
     const loadNumber = document.querySelector('.number-loading')
     const bg = document.querySelector('.bg')
+    const nextButton = document.querySelector('.next')
 
     let load = 0
 
-    let time_interval = setInterval(blurred, 20)
+    let time_interval = setInterval(blurred, 15)
 
     function blurred(){
         load++;
 
-        if(load == 100){
+        if(load == 150){
             clearInterval(time_interval)
         }
         
@@ -62,6 +82,7 @@
         loadNumber.style.opacity = scale(load, 0, 100, 1, 0)
 
         bg.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`
+        nextButton.style.opacity = scale(load, 100, 150, 0, 1)
     }
 
     const scale = function(num, in_min, in_max, out_min, out_max) {
