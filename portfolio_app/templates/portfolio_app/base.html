@@ -1,6 +1,8 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="{% static 'portfolio_app/style.css' %}">
         <title>
             Portfolio App
         </title>
@@ -10,4 +12,6 @@
         
         {% endblock %}
     </body>
+
+    <script type="text/javascript" src="{% static 'portfolio_app/index.js' %}"></script>
 </html>

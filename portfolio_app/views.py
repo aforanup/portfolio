@@ -3,9 +3,8 @@ from django.http import HttpResponse
 
 
 def index(request):
-    context = {}
-    return render(request, 'portfolio_app/home.html', context)
+    return render(request, 'portfolio_app/home.html')
+
 
 def home(request):
-    context = {}
-    return render(request, 'portfolio_app/home.html', context)
+    return render(request, 'portfolio_app/home.html')
