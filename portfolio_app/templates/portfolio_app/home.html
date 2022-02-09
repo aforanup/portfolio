@@ -1,11 +1,61 @@
 {% extends 'portfolio_app/base.html' %}
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'portfolio_app/style.css' %}">
+<!-- <link rel="stylesheet" href="{% static 'portfolio_app/style.css' %}"> -->
 
 {% block content %}
 
-<div class="home-container">
+
+
+<div class="slider-container">
+    <div class="left-slide">
+      <div style="background-color:darkorange">
+        <h1>Who am I</h1>
+      </div>
+      <div style="background-color:teal">
+        <h1>Skills I Have</h1>
+      </div>
+      <div style="background-color: darkorange">
+        <h1>My Journey</h1>
+      </div>
+      <div style="background-color: teal">
+        <h1>My Socials</h1>
+      </div>
+      <div style="background-color: darkorange">
+        <h1>Reach Me</h1>
+      </div>
+    </div>
+    <div class="right-slide">
+        <div style="background-color: teal">
+            <p>
+                Email Form
+            </p>
+        </div>
+        <div style="background-color: darkorange">
+            <p>Logos of GITHUB, LINKEDIN, GMAIL</p>
+        </div>
+        <div style="background-color: teal">
+            <p>Experiences, College, Job ETC</p>
+        </div>
+        <div style="background-color: darkorange">
+            SKILLS LOGOS
+        </div>
+        <div style="background-color: teal">
+            <p>ABOUT MYSELF AND SOME GIF FUN AND INTERESTING BANAUNA</p>
+        </div>
+    </div>
+    <div class="action-buttons">
+      <button class="down-button">
+        <i class="fas fa-arrow-down"></i>
+      </button>
+      <button class="up-button">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+  </div>
+
+
+<!-- <div class="home-container">
     <section class = "bg"></section>
     <div class = "number-loading">
     </div>
@@ -13,5 +63,5 @@
         <input type="button" class="next-button" value="Enter The Zone" />
     </a>
 </div>
-<script type="text/javascript" src="{% static 'portfolio_app/index.js' %}"></script>
+<script type="text/javascript" src="{% static 'portfolio_app/index.js' %}"></script> -->
 {% endblock %}
