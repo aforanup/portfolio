@@ -9,40 +9,47 @@
 
 <div class="slider-container">
     <div class="left-slide">
-      <div style="background-color:darkorange">
-        <h1>Who am I</h1>
-      </div>
-      <div style="background-color:teal">
-        <h1>Skills I Have</h1>
-      </div>
-      <div style="background-color: darkorange">
-        <h1>My Journey</h1>
-      </div>
-      <div style="background-color: teal">
+        <div style="background-color: rgb(209, 115, 0)">
+            <h1>Reach Me</h1>
+        </div>
+        <div style="background-color: teal">
         <h1>My Socials</h1>
-      </div>
-      <div style="background-color: darkorange">
-        <h1>Reach Me</h1>
-      </div>
+        </div>
+        <div style="background-color: rgb(209, 115, 0)">
+        <h1>My Journey</h1>
+        </div>
+        <div style="background-color:teal">
+        <h1>Skills I Have</h1>
+        </div>
+        <div style="background-color:rgb(209, 115, 0)">
+        <h1>Who am I</h1>
+        </div>
     </div>
+    
     <div class="right-slide">
         <div style="background-color: teal">
-            <p>
-                Email Form
-            </p>
+            <p>Aspiring Django Developer.</p>
+            <p>Worked as a Software developer for a year in the valley.</p>
         </div>
-        <div style="background-color: darkorange">
-            <p>Logos of GITHUB, LINKEDIN, GMAIL</p>
+        <div style="background-color: rgb(209, 115, 0)">
+            <i class="fab fa-github"></i>
         </div>
         <div style="background-color: teal">
             <p>Experiences, College, Job ETC</p>
         </div>
-        <div style="background-color: darkorange">
-            SKILLS LOGOS
+        <div style="background-color: rgb(209, 115, 0)">
+            <p>Logos of GITHUB, LINKEDIN, GMAIL</p>
         </div>
         <div style="background-color: teal">
-            <p>ABOUT MYSELF AND SOME GIF FUN AND INTERESTING BANAUNA</p>
-        </div>
+            <p>Want to contact me?</p>
+            <form method="post">
+                {% csrf_token %}
+                <input style="width:150%" class="form-control" type="text" name="name" placeholder="Type your name.">
+                <input style="width:150%" class="form-control" type="email" name="address" placeholder="Type your email.">
+                <input style="width:150%" class="form-control" type="text" name="message" placeholder="Type your message.">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>        
     </div>
     <div class="action-buttons">
       <button class="down-button">
