@@ -55,6 +55,23 @@ body {
 p {
     font-size: 24px;
 }
+a:link {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(200, 255, 0);
+    background-color: transparent;
+    text-decoration: underline;
+}
 
 input {
     position: relative;
